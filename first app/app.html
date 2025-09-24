@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Career Point Login</title>
+    <link rel="stylesheet" href="app.css" />
+    <!-- Firebase SDKs -->
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
+</head>
+
+<body>
+    <div class="login-container">
+        <h1 class="brand-title">Career Point</h1>
+
+        <div id="login-options">
+            <button id="btn-username-login" class="btn-primary">Login with Username</button>
+            <button id="btn-phone-login" class="btn-primary">Login with Phone Number</button>
+            <div id="google-signin-button"></div>
+        </div>
+
+        <form id="login-form" style="display:none;">
+            <div class="input-group">
+                <label for="username">Username</label>
+                <input id="username" type="text" placeholder="Enter username" />
+            </div>
+            <div class="input-group">
+                <label for="password">Password</label>
+                <input id="password" type="password" placeholder="Enter password" />
+            </div>
+            <button type="submit" class="btn-primary">Login</button>
+            <button type="button" id="back-from-username" class="btn-primary">Back</button>
+            <div id="error-msg" class="error-message"></div>
+        </form>
+
+        <form id="phone-login-form" style="display:none;">
+            <div class="input-group">
+                <label for="phone-number">Phone Number</label>
+                <input id="phone-number" type="tel" placeholder="+911234567890" />
+                <div id="recaptcha-container"></div>
+            </div>
+            <button type="submit" class="btn-primary">Send OTP</button>
+            <button type="button" id="back-from-phone" class="btn-primary">Back</button>
+            <div id="phone-error-msg" class="error-message"></div>
+        </form>
+
+        <form id="otp-form" style="display:none;">
+            <div class="input-group">
+                <label for="otp-code">Enter OTP</label>
+                <input id="otp-code" type="text" maxlength="6" placeholder="6-digit code" />
+            </div>
+            <button type="submit" class="btn-primary">Verify OTP</button>
+            <button type="button" id="back-from-otp" class="btn-primary">Back</button>
+            <div id="otp-error-msg" class="error-message"></div>
+        </form>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>

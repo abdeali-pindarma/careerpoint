@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>College Explorer</title>
+    <link rel="stylesheet" href="college.css" />
+</head>
+
+<body>
+    <nav class="navbar">
+        <span class="brand">College Explorer</span>
+        <div style="display:flex; align-items:center; gap:12px;">
+            <select id="theme-switcher" aria-label="Theme switcher" title="Select color theme">
+        <option value="blue">Blue</option>
+        <option value="purple">Purple</option>
+        <option value="green">Green</option>
+      </select>
+            <button id="dark-toggle" title="Toggle dark mode">🌙</button>
+            <button id="avatar-btn" title="Profile">👤</button>
+        </div>
+    </nav>
+
+    <main style="padding: 20px; max-width: 900px; margin: auto;">
+        <section class="card">
+            <h2 class="card-title">Filters</h2>
+            <div style="display:flex; gap:12px; flex-wrap:wrap;">
+                <select id="stream-filter" aria-label="Stream Filter">
+          <option value="">All Streams</option>
+        </select>
+
+                <select id="state-filter" aria-label="State Filter">
+          <option value="">All States</option>
+        </select>
+
+                <input id="search-input" type="search" placeholder="Search by college name..." aria-label="Search colleges" />
+            </div>
+        </section>
+
+        <section class="card">
+            <h2 class="card-title">Results</h2>
+            <div id="results" style="display:grid; gap:16px;"></div>
+            <div id="status" style="margin-top:8px; opacity:.8;"></div>
+        </section>
+    </main>
+
+    <!-- Profile Modal -->
+    <div id="profile-modal" class="modal" aria-hidden="true">
+        <div class="modal-content" role="dialog" aria-modal="true" aria-labelledby="profile-title" tabindex="-1">
+            <button id="close-profile" aria-label="Close profile modal" title="Close">✖</button>
+            <h3 class="card-title" id="profile-title">Your Profile</h3>
+            <p>Demo profile modal. You can put user details here.</p>
+        </div>
+    </div>
+
+    <script src="college.js" defer></script>
+</body>
+
+</html>

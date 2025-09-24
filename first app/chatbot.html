@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Career Point — Find Your Interest with AI</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="chatbot.css">
+</head>
+
+<body>
+    <header class="chat-header">
+        <h1>
+            <i class="fas fa-robot" style="color:#6271c7;margin-right:10px;"></i> Career Point
+        </h1>
+        <button class="top-dashboard-btn" onclick="window.location.href='dashboard.html'">
+      <i class="fas fa-home"></i> Dashboard
+    </button>
+    </header>
+    <main>
+        <div class="chatbot-bg"></div>
+        <div class="chatbot-container">
+            <div class="chat-window" id="chat-window"></div>
+            <form id="chat-form">
+                <input type="text" id="chat-input" placeholder="Type your answer..." autocomplete="off" required>
+                <button type="submit">
+          <i class="fas fa-paper-plane"></i>
+        </button>
+            </form>
+            <button id="next-btn" class="next-btn">
+        <i class="fas fa-arrow-right"></i> Next (Career Options)
+      </button>
+        </div>
+    </main>
+    <script src="chatbot.js"></script>
+</body>
+
+</html>

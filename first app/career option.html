@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Career Explorer</title>
+    <link rel="stylesheet" href="career.css" />
+</head>
+
+<body>
+
+    <header class="header-bar">
+        Career Explorer
+        <button id="themeToggle" title="Toggle Theme">🌙</button>
+    </header>
+
+    <div id="streams"></div>
+    <div id="careers"></div>
+
+    <!-- Colleges section with navigation buttons -->
+    <section id="colleges-section" style="margin-top:2rem; text-align:center;">
+        <h2>Colleges</h2>
+        <div id="college-nav-buttons" class="nav-btn-group">
+            <button id="backBtn" class="nav-btn">⟵ Back</button>
+            <button id="nextBtn" class="nav-btn">Next ⟶</button>
+        </div>
+    </section>
+
+    <!-- Career Details Modal -->
+    <div id="career-details" class="modal">
+        <div class="modal-content">
+            <button id="closeModal">&times;</button>
+            <div id="details-content"></div>
+        </div>
+    </div>
+
+    <script src="career.js"></script>
+</body>
+
+</html>
